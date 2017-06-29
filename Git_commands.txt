@@ -1,0 +1,95 @@
+unzip Git_Introduction.zip
+cd Git_Introduction
+ls
+
+git init
+
+git remote add origin git@github.com:BorisHaeussler/Git_Introduction.git
+git status
+
+git add *
+git commit -m "My first commit"
+git push -u origin master
+
+echo "# Git_Introduction" >> README.md
+git add README.md
+git commit
+
+git status
+
+git push
+
+mv README.md README_renamed.md
+git status
+
+mv README_renamed.md README.md
+git mv README.md README_renamed.md
+git status
+
+git mv README_renamed.md README.md
+emacs README.md      #add a comment
+
+
+git diff
+
+echo "# Git_Introduction" > ignored_file
+git status
+
+emacs .gitignore
+
+git status
+
+git add .gitignore
+git commit -a -m "modified README.md, adapted and added .gitignore"
+git push
+
+2: git clone git@github.com:BorisHaeussler/Git_Introduction.git Git_Introduction2
+cd Git_Introduction2
+ls
+
+2: emacs README.md
+git commit -a -m "modified README.md"
+git push     #before, edit, after
+
+emacs README.md     # edit
+git pull
+
+git commit -a -m "modified README.md again"
+git push
+
+git status
+
+git pull
+
+git mergetool README.md
+
+ls
+
+rm README.md.orig
+git status
+
+git commit -a -m "fixed merge conflict"git push
+
+
+git checkout -b testing
+git commit -m "new branch testing"
+
+emacs README.md
+
+git commit -a -m "added new feature to README"
+git push origin testing
+
+git checkout master
+git merge testing
+
+git pull origin master
+
+git push
+
+; look at the log
+git log
+
+#show GitX tree
+
+; git cheat sheet
+
